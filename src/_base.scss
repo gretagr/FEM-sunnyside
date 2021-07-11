@@ -1,0 +1,80 @@
+html {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: $neutral-400;
+}
+
+h1 {
+  font-size: 3.1;
+}
+
+p,
+a {
+  font-family: $ff-body;
+}
+
+button {
+  border: none;
+  background: none;
+}
+h1,
+h2,
+h3,
+button,
+.article__link,
+.card__name {
+  font-family: $ff-headings;
+  color: $neutral-500;
+}
+
+button,
+h1,
+.article__link,
+.testimonials__title {
+  text-transform: uppercase;
+}
+
+nav a,
+.card__name,
+.card__profession,
+.article__title,
+.article--bottom__title {
+  text-transform: capitalize;
+}
+
+h1,
+.header__nav a {
+  color: $neutral-100;
+}
+.article__title {
+  font-size: 2.2rem;
+}
+
+.article--bottom__title {
+  color: $primary-cyan-400;
+  font-size: 1.6rem;
+}
+
+.article--bottom__text {
+  color: $primary-cyan-300;
+  font-size: 0.9rem;
+}
+
+.card__profession,
+.article__link {
+  font-size: 0.8rem;
+}
+
+.testimonials__title {
+  font-size: 1.1rem;
+}
+
+.heading {
+  font-size: 3.3rem;
+}

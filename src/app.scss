@@ -1,3 +1,39 @@
 @import 'reset';
 @import 'variables';
+@import 'base';
 @import 'components';
+
+// header styles
+
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../images/desktop/header-2880w.jpg');
+  background-size: cover;
+  background-position: center;
+
+  &__nav {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    a {
+      padding: 0 1.6rem;
+    }
+
+    button {
+      margin-left: 1.6rem;
+      @include button;
+    }
+  }
+
+  img {
+    height: 1.8rem;
+  }
+
+  .heading {
+    text-align: center;
+    padding-top: 6rem;
+  }
+}
