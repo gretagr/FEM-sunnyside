@@ -1,5 +1,12 @@
 html {
-  font-size: 18px;
+  font-size: #{$html-font-size}px;
+}
+
+// to remove whitespaces
+section,
+article,
+div {
+  font-size: 0;
 }
 
 a {
@@ -8,15 +15,13 @@ a {
 
 p {
   color: $neutral-400;
-}
-
-h1 {
-  font-size: 3.1;
+  line-height: pxToRem(32);
 }
 
 p,
 a {
   font-family: $ff-body;
+  font-size: pxToRem(18);
 }
 
 button {
@@ -53,28 +58,34 @@ h1,
   color: $neutral-100;
 }
 .article__title {
-  font-size: 2.2rem;
+  font-size: pxToRem(40);
 }
 
 .article--bottom__title {
   color: $primary-cyan-400;
-  font-size: 1.6rem;
+  font-size: pxToRem(28);
 }
 
 .article--bottom__text {
   color: $primary-cyan-300;
-  font-size: 0.9rem;
+  font-size: pxToRem(16);
+  line-height: pxToRem(27);
 }
 
 .card__profession,
 .article__link {
-  font-size: 0.8rem;
+  font-size: pxtorem(15);
 }
 
 .testimonials__title {
-  font-size: 1.1rem;
+  font-size: pxToRem(20);
+}
+
+.card__profession,
+.testimonials__title {
+  color: $neutral-200;
 }
 
 .heading {
-  font-size: 3.3rem;
+  font-size: pxToRem(56);
 }

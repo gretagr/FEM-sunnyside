@@ -1,0 +1,13 @@
+// media queries
+
+@mixin media($sizeInPx) {
+  @media screen and (max-width: #{$sizeInPx}px) {
+    @content;
+  }
+}
+
+// functions
+
+@function pxToRem($px) {
+  @return ($px / $html-font-size) + rem;
+}

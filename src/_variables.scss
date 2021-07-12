@@ -1,9 +1,12 @@
 // colors
-$primary-red: hsl(7, 99%, 70%);
-$primaty-yellow: hsl(51, 100%, 49%);
+$primary-red-10: hsl(11, 96%, 91%);
+$primary-red-200: hsl(7, 99%, 70%);
+$primary-yellow-100: hsl(50, 94%, 86%);
+$primary-yellow-200: hsl(51, 100%, 49%);
 $primary-cyan-400: hsl(198, 62%, 26%);
 $primary-cyan-300: hsl(167, 40%, 24%);
 $primary-cyan-200: hsl(168, 34%, 41%);
+$primary-blue: hsl(199, 86%, 71%);
 
 $neutral-500: hsl(212, 27%, 19%);
 $neutral-400: hsl(213, 9%, 39%);
@@ -15,3 +18,4 @@ $neutral-100: hsl(0, 0%, 100%);
 
 $ff-body: 'Barlow', sans-serif;
 $ff-headings: 'Fraunces', serif;
+$html-font-size: 18;

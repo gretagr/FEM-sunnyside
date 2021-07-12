@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'variables';
+@import 'mixins';
 @import 'base';
 @import 'components';
 
@@ -11,6 +12,14 @@
   background-image: url('../images/desktop/header-2880w.jpg');
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .arrow {
+    align-self: center;
+    padding-top: 6rem;
+  }
 
   &__nav {
     padding: 2rem;
@@ -20,6 +29,10 @@
 
     a {
       padding: 0 1.6rem;
+
+      img {
+        height: 1.8rem;
+      }
     }
 
     button {
@@ -28,12 +41,205 @@
     }
   }
 
-  img {
-    height: 1.8rem;
-  }
-
   .heading {
     text-align: center;
-    padding-top: 6rem;
+    padding-top: 10vh;
+    width: 100%;
+  }
+}
+
+// sections
+
+.main {
+  // first two sections
+  .split-section {
+    display: flex;
+
+    &__image {
+      img {
+        object-fit: cover;
+        max-width: 100%;
+      }
+    }
+
+    &__image,
+    .article {
+      width: 50%;
+    }
+
+  }
+
+  // .article__link {
+  //   transition: all 300ms ease;
+  // }
+
+  .split-section:first-child {
+    flex-direction: row-reverse;
+
+    .article__link {
+      &:hover {
+        &::after {
+          background-color: $primary-yellow-200;
+        }
+      }
+    }
+
+    .article__link::after {
+      background-color: $primary-yellow-100;
+    }
+  }
+
+  .split-section:nth-child(2) {
+
+    .article__link {
+      &:hover {
+        &::after {
+          background-color: $primary-red-200;
+        }
+      }
+
+    .article__link::after {
+      background-color: $primary-red-100;
+    }
+  }
+
+  .split-section {
+    .article {
+      padding-left: 8%;
+      padding-top: 10%;
+
+      &__title {
+        max-width: 17ch;
+        font-weight: 900;
+      }
+
+      &__text {
+        max-width: 44ch;
+      }
+
+      &__title,
+      &__text {
+        padding-bottom: 3rem;
+      }
+
+      &__link {
+        position: relative;
+      }
+
+      &__link::after {
+        content: '';
+        display: block;
+        border-radius: 28px;
+        width: 150px;
+        height: 12px;
+        position: absolute;
+        left: -10px;
+        bottom: -3px;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+// bottom sections
+
+.bottom-section {
+  display: flex;
+  .article {
+    &--bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 30% 12% 5%;
+      &__text,
+      &__title {
+        text-align: center;
+        padding-bottom: 2rem;
+      }
+    }
+
+    &--bottom {
+      background-size: cover;
+      background-position: top center;
+      width: 50%;
+      min-height: 50vh;
+    }
+
+    &--bottom:first-child {
+      background-image: url('../images/desktop/berries-720w.jpg');
+    }
+
+    &--bottom:last-child {
+      background-image: url('../images/desktop/tangerine-720w.jpg');
+    }
+  }
+}
+
+// responsive images
+
+.bottom-section {
+  .article {
+    @include media(1200) {
+      &--bottom {
+        min-height: 60vh;
+      }
+      &--bottom:first-child {
+        background-image: url('../images/mobile/berries-750w.jpg');
+      }
+
+      &--bottom:last-child {
+        background-image: url('../images/mobile/tangerine-720w.jpg');
+      }
+    }
+  }
+}
+// testimonials
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  &__title {
+    padding: 8rem 0 0 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.card {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2rem 0 6rem 0;
+
+  &__image {
+    border-radius: 50%;
+    width: 72px;
+    padding: 1rem 0;
+  }
+
+  &__name {
+    padding: 1rem 0;
+    font-weight: 800;
+  }
+
+  &__text {
+    padding: 2rem 0;
+  }
+}
+
+// footer images
+
+.images {
+  display: flex;
+  img {
+    max-width: 25%;
   }
 }
